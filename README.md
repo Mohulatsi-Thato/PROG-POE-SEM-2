@@ -1,9 +1,13 @@
+Thato Mohulatsi
+ST10433960
+Group 2
+
 # Contract Monthly Claim System (CMCS) Prototype
 
 This is a **.NET Core MVC** prototype for the Contract Monthly Claim System (CMCS).  
 The system is designed to streamline the process of submitting, verifying, and approving monthly claims from lecturers.
 
-ST10433960
+
 
 ## 📋 Features (Prototype Stage)
 
