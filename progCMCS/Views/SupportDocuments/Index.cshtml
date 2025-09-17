@@ -1,0 +1,33 @@
+﻿@model IEnumerable<progCMCS.Models.SupportingDocument>
+
+@{
+    ViewData["Title"] = "Supporting Documents";
+}
+
+<h2>Supporting Documents</h2>
+<p><a href="/SupportingDocuments/Create">+ Add Supporting Document</a></p>
+
+@if (!Model.Any())
+{
+    <p>No supporting documents found.</p>
+}
+else
+{
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Claim ID</th>
+            <th>File Path</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var doc in Model)
+        {
+            <tr>
+                <td>@doc.DocumentID</td>
+                <td>@doc.ClaimID</td>
+                <td>@doc.FilePath</td>
+                <td>@doc.Description</td>
+            </tr>
+        }
+    </table>
+}

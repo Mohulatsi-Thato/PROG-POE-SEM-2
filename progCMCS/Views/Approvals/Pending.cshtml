@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <h2>Pending Approvals</h2>
+    <table>
+        <thead><tr><th>Lecturer</th><th>Date</th><th>Amount</th><th>Attachments</th><th>Decision</th><th>Comment</th></tr></thead>
+        <tbody>
+            <tr>
+                <td>J. Doe</td>
+                <td>2025-03-01</td>
+                <td>R 1,200.00</td>
+                <td><a href="#">2 files</a></td>
+                <td>
+                    <button class="btn">Approve</button>
+                    <button class="btn-secondary">Reject</button>
+                </td>
+                <td><input type="text" placeholder="Optional comment" /></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<progCMCS.Models.Claim>
+
+<h2>Claims</h2>
+<p><a href="/Claims/Create">+ New Claim</a></p>
+
+<table border="1" cellpadding="5">
+    <tr><th>ID</th><th>Date</th><th>Amount</th><th>Status</th><th>Description</th><th>Action</th></tr>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.ClaimID</td>
+            <td>@c.DateSubmitted.ToShortDateString()</td>
+            <td>@c.ClaimAmount</td>
+            <td>@c.Status</td>
+            <td>@c.Description</td>
+            <td><a href="/Claims/Review/@c.ClaimID">Review</a></td>
+        </tr>
+    }
+</table>

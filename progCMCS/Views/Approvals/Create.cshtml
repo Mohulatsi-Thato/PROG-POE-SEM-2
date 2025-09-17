@@ -1,0 +1,21 @@
+﻿@model progCMCS.Models.Approval
+
+<h2>Record Approval</h2>
+<form method="post">
+    <label>Claim ID:</label>
+    <input type="number" name="ClaimID" /><br /><br />
+
+    <label>Manager ID:</label>
+    <input type="number" name="ManagerID" /><br /><br />
+
+    <label>Decision:</label>
+    <select name="Decision">
+        <option>Approved</option>
+        <option>Rejected</option>
+    </select><br /><br />
+
+    <label>Comments:</label>
+    <textarea name="Comments"></textarea><br /><br />
+
+    <input type="submit" value="Save Approval" />
+</form>

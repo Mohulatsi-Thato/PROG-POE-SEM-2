@@ -1,0 +1,19 @@
+﻿@model IEnumerable<progCMCS.Models.Approval>
+
+<h2>Approvals</h2>
+<p><a href="/Approvals/Create">+ New Approval</a></p>
+
+<table border="1" cellpadding="5">
+    <tr><th>ID</th><th>ClaimID</th><th>ManagerID</th><th>Date</th><th>Decision</th><th>Comments</th></tr>
+    @foreach (var a in Model)
+    {
+        <tr>
+            <td>@a.ApprovalID</td>
+            <td>@a.ClaimID</td>
+            <td>@a.ManagerID</td>
+            <td>@a.ApprovalDate.ToShortDateString()</td>
+            <td>@a.Decision</td>
+            <td>@a.Comments</td>
+        </tr>
+    }
+</table>

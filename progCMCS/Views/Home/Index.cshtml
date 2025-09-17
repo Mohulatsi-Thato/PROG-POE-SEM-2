@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<style>
+    .welcome {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+        .welcome h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0052cc;
+        }
+
+        .welcome p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .card {
+        background: #fff;
+        padding: 25px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+            .card a:hover {
+                text-decoration: underline;
+            }
+</style>
+
+<div class="welcome">
+    <h2>Welcome to the Contract Monthly Claim System</h2>
+    <p>Choose a section below to get started managing your data.</p>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h3>Lecturers</h3>
+        <a href="/Lecturers">Manage Lecturers</a>
+    </div>
+    <div class="card">
+        <h3>Claims</h3>
+        <a href="/Claims">Manage Claims</a>
+    </div>
+    <div class="card">
+        <h3>Supporting Documents</h3>
+        <a href="/SupportingDocuments">Manage Documents</a>
+    </div>
+    <div class="card">
+        <h3>Managers</h3>
+        <a href="/Managers">Manage Managers</a>
+    </div>
+    <div class="card">
+        <h3>Approvals</h3>
+        <a href="/Approvals">Manage Approvals</a>
+    </div>
+</div>

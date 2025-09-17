@@ -1,0 +1,31 @@
+﻿@model progCMCS.Models.SupportingDocument
+
+@{
+    ViewData["Title"] = "Add Supporting Document";
+}
+
+<h2>Add Supporting Document</h2>
+
+<form method="post">
+    <div>
+        <label for="ClaimID">Claim ID:</label><br />
+        <input type="number" id="ClaimID" name="ClaimID" required />
+    </div>
+    <br />
+
+    <div>
+        <label for="FilePath">File Path:</label><br />
+        <input type="text" id="FilePath" name="FilePath" required />
+    </div>
+    <br />
+
+    <div>
+        <label for="Description">Description:</label><br />
+        <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+    </div>
+    <br />
+
+    <button type="submit">Save</button>
+</form>
+
+<p><a href="/SupportingDocuments">Back to List</a></p>

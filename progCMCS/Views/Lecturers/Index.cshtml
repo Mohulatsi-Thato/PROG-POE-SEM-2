@@ -1,0 +1,33 @@
+﻿@model IEnumerable<progCMCS.Models.Lecturer>
+
+@{
+    ViewData["Title"] = "Lecturers";
+}
+
+<h2>Lecturers</h2>
+<p><a href="/Lecturers/Create">+ Add New Lecturer</a></p>
+
+@if (!Model.Any())
+{
+    <p>No lecturers found.</p>
+}
+else
+{
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email</th>
+        </tr>
+        @foreach (var l in Model)
+        {
+            <tr>
+                <td>@l.LecturerID</td>
+                <td>@l.Name</td>
+                <td>@l.Department</td>
+                <td>@l.Email</td>
+            </tr>
+        }
+    </table>
+}

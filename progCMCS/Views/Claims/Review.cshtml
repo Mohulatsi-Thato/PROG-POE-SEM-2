@@ -1,0 +1,10 @@
+﻿@model progCMCS.Models.Claim
+
+<h2>Review Claim</h2>
+<p>ID: @Model.ClaimID</p>
+<p>Date: @Model.DateSubmitted.ToShortDateString()</p>
+<p>Amount: @Model.ClaimAmount</p>
+<p>Status: @Model.Status</p>
+<p>Description: @Model.Description</p>
+
+<p><button>Approve</button> <button>Reject</button></p>

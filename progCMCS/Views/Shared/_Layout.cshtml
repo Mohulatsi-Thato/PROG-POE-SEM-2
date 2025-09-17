@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - CMCS</title>
+    <style>
+        /* Base Reset & Font */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f9fc;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0052cc, #007bff);
+            color: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 1.8rem;
+                letter-spacing: 0.5px;
+            }
+
+        /* Navigation */
+        nav {
+            margin-top: 10px;
+        }
+
+            nav a {
+                color: #fff;
+                margin-right: 20px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: opacity 0.2s ease;
+            }
+
+                nav a:hover {
+                    opacity: 0.8;
+                }
+
+        /* Main Content */
+        main {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contract Monthly Claim System</h1>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/Lecturers">Lecturers</a>
+            <a href="/Claims">Claims</a>
+            <a href="/SupportingDocuments">Supporting Documents</a>
+            <a href="/Managers">Managers</a>
+            <a href="/Approvals">Approvals</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year Contract Monthly Claim System</p>
+    </footer>
+</body>
+</html>
